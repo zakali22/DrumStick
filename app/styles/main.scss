@@ -1,0 +1,47 @@
+$icon-font-path: '../fonts/';
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+body {
+  background-color: #ffb366;
+}
+
+.keys {
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 350px;
+
+}
+
+.key {
+  display: inline-block;
+  background-color: #333;
+  color: white;
+  width: 100px;
+  text-align: center;
+}
+
+span {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #ff6666;
+}
+
+kbd {
+  display: block;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 1690px) {
+  .keys {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1210px) {
+  .keys {
+    width: 60%;
+  }
+}
