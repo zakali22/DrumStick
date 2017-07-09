@@ -12,7 +12,6 @@ window.addEventListener('keydown', function(e){
 
   // Related to key animation
   key.classList.add('playing');
-
   // Logging out info
   console.log(audio);
   console.log(key);
