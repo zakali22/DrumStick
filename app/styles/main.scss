@@ -3,7 +3,7 @@ $icon-font-path: '../fonts/';
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Raleway|Inconsolata');
 
 body {
   background-image: url('../images/concert.jpg');
@@ -13,9 +13,30 @@ body {
   display: block;
   width: 40%;
   margin: 0 auto;
-  margin-top: 150px;
+  margin-top: 50px;
 
 }
+
+.header .play {
+  margin-top: 50px;
+  color: #ff6666;
+  font-family: 'Inconsolata', monospace;
+  background-color: white;
+  font-size: 19px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.header .stop {
+  margin-top: 50px;
+  color: #ff6666;
+  font-family: 'Inconsolata', monospace;
+  background-color: white;
+  font-size: 19px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
 
 .key {
   display: inline-block;

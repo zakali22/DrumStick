@@ -1,3 +1,4 @@
+var audioList = [];
 function playSound(e){
   var audio = document.querySelector('audio[data-key="' + e.keyCode + '"]');
   var key = document.querySelector('.key[data-key="' + e.keyCode + '"]');
@@ -6,16 +7,41 @@ function playSound(e){
   if(!audio){ //if key clicked doesn't exist then stop function
     return; //stops function
   }
-  audio.currentTime = 0;
+  audioList.push(audio);
+  audio.load();
   audio.play(); //this plays the corresponding audio
-  // Related to key animation
+
+  // // Related to key animation
   key.classList.add('playing');
-  
+
   // Logging out info
-  console.log(audio);
+  console.log(audioList);
   console.log(key);
 }
 
+
+function stopSound(e){
+  var audio = document.querySelector('audio[data-key="' + e.keyCode + '"]');
+
+
+}
+
+
+var button = document.querySelector('.play');
+var stop = document.querySelector('.stop');
+button.addEventListener('click', function(){
+  audioList.forEach(function(sound){
+    sound.loop = true;
+    sound.play();
+  });
+});
+
+stop.addEventListener('click', function(){
+  audioList.forEach(function(sound){
+    sound.pause();
+    sound.currentTime = 0;
+  });
+});
 
 var keys = document.querySelectorAll('.key');
 function removeTransition(){
@@ -25,6 +51,8 @@ function removeTransition(){
 keys.forEach(function (key) {
   return key.addEventListener('transitionend', removeTransition);
 });
+
+
 
 
 window.addEventListener('keydown', playSound);
